@@ -5,6 +5,7 @@
  */
 package servlet;
 
+import facade.UsuarioFacade;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -29,19 +30,30 @@ public class Servlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Servlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Servlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+       
+        if (request.getParameter("txtObjeto").equals("Usuario")) {
+            
+            UsuarioFacade usuarioFacade = new UsuarioFacade();
+            switch (request.getParameter("txtMetodo")) {
+                case "Cadastrar":
+                    usuarioFacade.incluir(request, response);
+                    break;
+                case "Salvar":
+                    usuarioFacade.salvar(request, response);
+                    break;
+                case "Editar":
+                    usuarioFacade.editar(request, response);
+                    break;
+                case "Listar":
+                    usuarioFacade.listar(request, response);
+                    break;
+                case "Excluir":
+                    usuarioFacade.excluir(request, response);
+                    break;
+            }
+
         }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

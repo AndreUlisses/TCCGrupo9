@@ -10,5 +10,3 @@ CREATE TABLE USUARIO (
 	, SENHA VARCHAR(45) NOT NULL
 );
 
-
-select * from usuario;

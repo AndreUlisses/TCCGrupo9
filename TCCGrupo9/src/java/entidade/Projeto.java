@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package entidade;
 
 import java.util.Date;
@@ -13,51 +12,71 @@ import java.util.Date;
  * @author NoteH
  */
 public class Projeto {
-    
-    private String Titulo;
-    private String Subtitulo;
-    private Date DT_Publicacao;
-    private String Curso;
-    private String Autores;
 
-    public String getTitulo() {
-        return Titulo;
+    private Integer id;
+    private String titulo;
+    private String subtitulo;
+    private Integer ano;
+    private Integer semestre;
+    private String curso;
+    private String autores;
+
+    public Integer getId() {
+        return id;
     }
 
-    public void setTitulo(String Titulo) {
-        this.Titulo = Titulo;
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getSubtitulo() {
-        return Subtitulo;
+        return subtitulo;
     }
 
-    public void setSubtitulo(String Subtitulo) {
-        this.Subtitulo = Subtitulo;
+    public void setSubtitulo(String subtitulo) {
+        this.subtitulo = subtitulo;
     }
 
-    public Date getDT_Publicacao() {
-        return DT_Publicacao;
+    public Integer getAno() {
+        return ano;
     }
 
-    public void setDT_Publicacao(Date DT_Publicacao) {
-        this.DT_Publicacao = DT_Publicacao;
+    public void setAno(Integer ano) {
+        this.ano = ano;
+    }
+
+    public Integer getSemestre() {
+        return semestre;
+    }
+
+    public void setSemestre(Integer semestre) {
+        this.semestre = semestre;
     }
 
     public String getCurso() {
-        return Curso;
+        return curso;
     }
 
-    public void setCurso(String Curso) {
-        this.Curso = Curso;
+    public void setCurso(String curso) {
+        this.curso = curso;
     }
 
     public String getAutores() {
-        return Autores;
+        return autores;
     }
 
-    public void setAutores(String Autores) {
-        this.Autores = Autores;
+    public void setAutores(String autores) {
+        this.autores = autores;
     }
-    
+
+   
+
 }

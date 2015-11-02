@@ -9,7 +9,7 @@ public class Usuario {
     private Integer id;
     private String nome;
     private Date dataNascimento;
-    private boolean sexo;
+    private char sexo;
     private String user;
     private String email;
     private String senha;
@@ -31,13 +31,15 @@ public class Usuario {
         this.dataNascimento = dataNascimento;
     }
 
-    public boolean isSexo() {
+    public char getSexo() {
         return sexo;
     }
 
-    public void setSexo(boolean sexo) {
+    public void setSexo(char sexo) {
         this.sexo = sexo;
     }
+
+    
 
     public String getUser() {
         return user;
